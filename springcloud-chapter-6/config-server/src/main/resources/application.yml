@@ -10,7 +10,7 @@ spring:
       server:
         git:
           uri: https://github.com/lllZLXlll/SpringCloudConfig/
-          search-paths: test-config
+          search-paths: /** # git上的配置文件目录，会搜索该目录下的配置文件
           username:
           password:
 

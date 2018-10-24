@@ -1,12 +1,16 @@
 server:
   port: 8881
 
+management:
+  security:
+    enabled: false
+
 spring:
   application:
-    name: config-client
+    name: config-client # 应用的名称要和git上的文件名称前缀一样：config-client-dev.yml
 
   cloud:
     config:
-      label: master
-      profile: dev
-      uri: http://localhost:8888/
+      label: master # 分支
+      profile: dev, test  # 文件的profile值 config-client-dev.yml config-client-test.yml
+      uri: http://localhost:8888/ # 配置服务的地址
