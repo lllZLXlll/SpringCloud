@@ -11,11 +11,11 @@ eureka:
       default-zone: http://localhost:8761/eureka/
 
 zuul:
-  routes: # 配置路由
+  routes:
     api-a:
-      path: /api-a/** # 路径
-      service-id: service-ribbon # 对应路径调用的服务
+      path: /api/v1/**
+      service-id: service-ribbon
 
     api-b:
-      path: /api-b/**
+      path: /api/v2/**
       service-id: service-feign
